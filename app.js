@@ -1,1 +1,8 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
+function addFriend(){
+    let friendName = document.getElementById("amigo");
+    friendList.push(friendName.value);
+    setTimeout( () => friendName.value = "", 400);  
+}
+
+let friendList = [];
+
