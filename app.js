@@ -6,12 +6,23 @@ function addFriend(){
 }
 
 function sortFriend(){
-
+    
+    updateFriendList();
     let [sortedFriend] = friendList.splice(parseInt(Math.random() * friendList.length), 1);
-    console.log(sortedFriend);
+    sortedFriendList.push(sortedFriend);
+    
+}
+
+function updateFriendList(){
+
+    let displayList  = document.getElementById("listaAmigos");
+    displayList.innerHTML = "";
+    for( item of sortedFriendList){
+        displayList.innerHTML += `<li> ${item} </li>`
+    }
+
 }
 
 
-
 let friendList = [];
-
+let sortedFriendList = [];
