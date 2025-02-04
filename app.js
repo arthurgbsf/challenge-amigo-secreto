@@ -6,9 +6,10 @@ function addFriend(){
 }
 
 function sortFriend(){
-    
+
     updateFriendList();
-    let [sortedFriend] = friendList.splice(parseInt(Math.random() * friendList.length), 1);
+    [sortedFriend] = friendList.splice(parseInt(Math.random() * friendList.length), 1);
+    displaySecretFriend();
     sortedFriendList.push(sortedFriend);
     
 }
@@ -23,6 +24,11 @@ function updateFriendList(){
 
 }
 
+function displaySecretFriend(){
+    let secretFriend = document.getElementById("resultado");
+    secretFriend.innerHTML = `<li> ${sortedFriend} </li>`;
+}
 
+let sortedFriend = "";
 let friendList = [];
 let sortedFriendList = [];
