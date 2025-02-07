@@ -11,7 +11,7 @@ function addFriend(){
         return alert("Entre com o nome de uma pessoa.");
     }
     friendList.push(friendName.value);
-    alert(`"${friendName.value}" foi adicionado com sucesso!`);
+    displayFriendList();
     setTimeout( () => friendName.value = "", 400);  
 };
 function sortFriend(){
@@ -23,18 +23,19 @@ function sortFriend(){
             return;
         };
     };
-    displaySortedFriendList();
     [sortedFriend] = friendList.splice(parseInt(Math.random() * friendList.length), 1);
     displaySecretFriend();
-    sortedFriendList.push(sortedFriend);
+    sortedFriendList.push(sortedFriend);   
     if (friendList.length == 0){
-        sortedFriendList = [];
-        return alert("Sorteio finalizado.");
+        setTimeout(() => {
+            alert("Sorteio finalizado.");
+            sortedFriendList = [];
+        }, 150);
     };
 };
-function displaySortedFriendList(){
+function displayFriendList(){
     displayList.innerHTML = "";
-    for( item of sortedFriendList){
+    for( item of friendList){
         displayList.innerHTML += `<li> ${item} </li>`
     };
 };
