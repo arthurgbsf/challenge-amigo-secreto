@@ -45,12 +45,14 @@ O projeto é um desafio proposto pela ONE (Oracle Next Education) um programa de
   <li>
     Certificação se deseja realmente iniciar o sorteio antes de sortear o primeiro nome;
   </li>
+<li>
+Proibição de realizar o sorteio com a lista de nomes de amigos vazia;        
+</li>
   <li>
     Sinalização de término do sorteio;
   </li>
   <li>
-  Proibição de iniciar outro sorteio caso ainda exista algum em progresso;
-    
+  Proibição de iniciar outro sorteio caso ainda exista algum em progresso;  
   </li>
   <li>
     Limpeza da lista de sorteados de forma automática antes de iniciar o próximo sorteio.
