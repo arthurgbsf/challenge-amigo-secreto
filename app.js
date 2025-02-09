@@ -1,7 +1,6 @@
 function addFriend(){
     if(friendList.length == 0){
-        displayList.innerHTML = "";
-        secretFriend.innerHTML = "";
+        cleanHtmlList();
     }
     if(sortedFriendList != 0){
         friendName.value = "";
@@ -42,6 +41,11 @@ function displayFriendList(){
 function displaySecretFriend(){
     secretFriend.innerHTML = `<li> ${sortedFriend} </li>`;
 };
+function cleanHtmlList(){
+    displayList.innerHTML = "";
+    secretFriend.innerHTML = "";
+};
+
 let sortedFriend = "";
 let friendList = [];
 let sortedFriendList = [];
